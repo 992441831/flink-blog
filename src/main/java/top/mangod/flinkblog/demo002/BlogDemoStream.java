@@ -13,6 +13,8 @@ import java.util.Arrays;
  * @author: baily
  * @mail: yclxiao@gmail.com
  * @created: 2023/7/10 16:07
+ * 本文DEMO示例-流计算：
+ * 读取给定的字符串，对字符串中的单词进行统计，最后输出到控制台
  **/
 public class BlogDemoStream {
     public static void main(String[] args) throws Exception {

@@ -24,7 +24,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * A sink for outputting alerts.
+ * 自定义sink，用于输出学生对象
+ * 实现了Flink的SinkFunction<SourceSourceDemo.Student>接口，专门用于处理和输出Student类型的数据
+ * 作为Flink流处理管道的终点，接收上游处理完成的数据并进行最终输出
+ * 这里简单地将Student对象转换为字符串并打印到日志中，实际应用中可以根据需求进行自定义输出逻辑，例如写入数据库、消息队列等
  */
 @PublicEvolving
 @SuppressWarnings("unused")

@@ -11,6 +11,9 @@ import java.util.Random;
  * @author: baily
  * @mail: yclxiao@gmail.com
  * @created: 2023/7/10 16:07
+ * 本文DEMO示例-数据源：
+ * 自定义数据源，生成随机的学生对象，每个对象包含姓名和成绩
+ * 执行main方法前，现在本地开启netcat，nc -lk 9999，然后输入任意字符，即可看到统计结果
  **/
 public class SourceSourceDemo {
     public static void main(String[] args) throws Exception {

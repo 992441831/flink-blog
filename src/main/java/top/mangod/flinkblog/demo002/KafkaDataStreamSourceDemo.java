@@ -18,6 +18,8 @@ import java.util.Arrays;
  * @author: baily
  * @mail: yclxiao@gmail.com
  * @created: 2023/7/10 16:07
+ * 本文DEMO示例-数据源：
+ * 从Kafka主题中读取数据，对数据进行统计，最后输出到控制台
  **/
 public class KafkaDataStreamSourceDemo {
     public static void main(String[] args) throws Exception {
