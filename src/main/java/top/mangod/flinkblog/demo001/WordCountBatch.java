@@ -13,7 +13,7 @@ import java.util.Arrays;
  * @mail: yclxiao@gmail.com
  * @created: 2023/7/10 16:07
  * 本文DEMO示例-批计算：
- * 读取socket数据源，对输入的数据进行统计，最后输出到控制台
+ * 读取给定的字符串，对字符串中的单词进行统计，最后输出到控制台
  * 执行main方法前，现在本地开启netcat，nc -lk 9999，然后输入任意字符，即可看到统计结果
  **/
 public class WordCountBatch {
