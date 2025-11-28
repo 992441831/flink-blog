@@ -83,13 +83,14 @@ public class LateEventsSocketWindowWordCount {
                 // 使用WindowFunction处理窗口内的数据
                 .apply(new WindowFunction<Tuple2<String, Integer>, Tuple2<String, Integer>, String, TimeWindow>() {
                     @Override
-                    public void apply(String key,          // 分组的键（单词）
-                                      TimeWindow window,   // 当前窗口对象
-                                      Iterable<Tuple2<String, Integer>> input,  // 窗口内的所有元素
-                                      Collector<Tuple2<String, Integer>> out) throws Exception {
-                        // 此处只输出第一个元素，在实际应用中可能需要进行聚合计算
-                        // 注意：这种实现方式对于多个相同key的数据只保留一个
-                        out.collect(input.iterator().next());
+                    public void apply(String key, TimeWindow window, Iterable<Tuple2<String, Integer>> input, Collector<Tuple2<String, Integer>> out) throws Exception {
+                        // 统计单词出现的总次数
+                        int count = 0;
+                        for (Tuple2<String, Integer> element : input) {
+                            count += element.f1;  // 累加每个元素的值
+                        }
+                        // 输出单词和总计数
+                        out.collect(Tuple2.of(key, count));
                     }
                 });
     
