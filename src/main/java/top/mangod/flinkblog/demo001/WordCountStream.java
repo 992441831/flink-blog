@@ -12,7 +12,9 @@ import org.apache.flink.util.Collector;
  * @created: 2023/7/10 16:07
  * 本文DEMO示例-流计算：
  * 读取socket数据源，对输入的数据进行统计，最后输出到控制台
- * 执行main方法前，现在本地开启netcat，nc -lk 9999，然后输入任意字符，即可看到统计结果
+ * 执行main方法前，现在本地开启netcat，
+ *
+ * ncat -lvp 9999   ，然后输入任意字符，即可看到统计结果
  **/
 public class WordCountStream {
     public static void main(String[] args) throws Exception {
